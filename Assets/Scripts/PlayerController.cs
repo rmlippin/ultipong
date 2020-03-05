@@ -18,9 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        print(value.ToString());
-        Debug.Log(value.ToString());
-       // Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
-       //rb2D.velocity = new Vector2(0, userInputVert) * speed;
+        Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
+        rb2D.velocity = value.Get<Vector2>() * speed;
     }
 }
