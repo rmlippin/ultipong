@@ -57,6 +57,6 @@ public class BallController : MonoBehaviour
         // Push it in some direction
         float randomInputVert = Random.Range(0.0f, 1.0f);
         float randomInputHori = Random.Range(0.0f, 1.0f);
-        rb2D.velocity = new Vector2(randomInputHori, randomInputVert) * speed;
+        rb2D.velocity = new Vector2(randomInputHori, randomInputVert).normalized * speed;
     }
 }
