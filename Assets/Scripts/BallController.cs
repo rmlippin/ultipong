@@ -55,8 +55,9 @@ public class BallController : MonoBehaviour
         yield return new WaitForSeconds(sec);
 
         // Push it in some direction
-        float randomInputVert = Random.Range(0.0f, 1.0f);
-        float randomInputHori = Random.Range(0.0f, 1.0f);
-        rb2D.velocity = new Vector2(randomInputHori, randomInputVert).normalized * speed;
+        float randomY = Random.Range(-0.7f, 0.7f);
+        float randomX = Mathf.Sqrt(1 + randomY * randomY);
+        if (Random.value < 0.5) randomX *= -1;
+        rb2D.velocity = new Vector2(randomX, randomY).normalized * speed;
     }
 }
