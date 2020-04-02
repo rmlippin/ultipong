@@ -27,6 +27,13 @@ public class ScoreKeeper : MonoBehaviour
         Rewrite();
     }
 
+    public static void ClearScore()
+    {
+        player2Score = 0;
+        player1Score = 0;
+        Rewrite();
+    }
+
     public static void Rewrite()
     {
         text.text = player1Score + " - " + player2Score;

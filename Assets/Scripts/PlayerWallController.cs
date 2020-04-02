@@ -13,5 +13,6 @@ public class PlayerWallController : MonoBehaviour
             ScoreKeeper.OnPlayer2Score();
         else
             ScoreKeeper.OnPlayer1Score();
+
     }
 }
